@@ -44,10 +44,10 @@ const Reviews = ({ data }: ReviewsProps) => {
   return (
     <section className="overflow-hidden">
       <motion.div
-        initial={{ x: "100px", opacity: 0 }}
-        whileInView={{ x: "0", opacity: 1 }}
+        initial={{ x: 20, opacity: 0 }}
+        whileInView={{ x: 0, opacity: 1 }}
         viewport={{ once: true }}
-        transition={{ duration: 0.6 }}
+        transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
       >
         <Carousel
           setApi={setApi}
@@ -59,10 +59,10 @@ const Reviews = ({ data }: ReviewsProps) => {
         >
           <div className="relative flex items-end sm:items-center max-w-frame mx-auto mb-6 md:mb-10 px-4 xl:px-0">
             <motion.h2
-              initial={{ y: "100px", opacity: 0 }}
-              whileInView={{ y: "0", opacity: 1 }}
+              initial={{ y: 18, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
               viewport={{ once: true }}
-              transition={{ delay: 0.6, duration: 0.6 }}
+              transition={{ delay: 0.08, duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
               className={cn([
                 integralCF.className,
                 "text-[32px] leading-[36px] md:text-5xl capitalize mr-auto",
